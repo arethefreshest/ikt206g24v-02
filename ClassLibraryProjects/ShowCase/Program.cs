@@ -21,7 +21,7 @@ class Program
         } while (true);
         return;
 
-        // Declare a ResetConsole local method /Test
+        // Declare a ResetConsole local method
         void ResetConsole()
         {
             if (row > 0)

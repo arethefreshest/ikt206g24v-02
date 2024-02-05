@@ -23,7 +23,7 @@ public class UnitTest1
     [TestMethod]
     public void TestDoesNotStartWithUpper()
     {
-        string[] words = { "alphabet", "Zebra", "abc", "αυτοκινητοβιομηχανία", "государство",
+        string[] words = { "alphabet", "zebra", "abc", "αυτοκινητοβιομηχανία", "государство",
                                "1234", ".", ";", " " };
         foreach (var word in words)
         {

@@ -20,9 +20,20 @@ jobs:
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 8.0.101
+
+    - name: Print environment information
+      run: |
+        echo "Current working directory: $PWD"
+        echo "GitHub Workspace: $GITHUB_WORKSPACE"
+
+    - name: List directory structure
+      run: ls -R CreateLibraryProjects/
+
     - name: Restore dependencies
       run: dotnet restore CreateLibraryProjects/CreateLibraryProjects.sln
+
     - name: Build
       run: dotnet build CreateLibraryProjects/CreateLibraryProjects.sln --no-restore
+
     - name: Test
       run: dotnet test CreateLibraryProjects/CreateLibraryProjects.sln --no-build --verbosity normal

@@ -27,13 +27,13 @@ jobs:
         echo "GitHub Workspace: $GITHUB_WORKSPACE"
 
     - name: List directory structure
-      run: ls -R CreateLibraryProjects/
+      run: ls -R ClassLibraryProjects/
 
     - name: Restore dependencies
-      run: dotnet restore CreateLibraryProjects/CreateLibraryProjects.sln
+      run: dotnet restore ClassLibraryProjects/ClassLibraryProjects.sln
 
     - name: Build
-      run: dotnet build CreateLibraryProjects/CreateLibraryProjects.sln --no-restore
+      run: dotnet build ClassLibraryProjects/ClassLibraryProjects.sln --no-restore
 
     - name: Test
-      run: dotnet test CreateLibraryProjects/CreateLibraryProjects.sln --no-build --verbosity normal
+      run: dotnet test ClassLibraryProjects/ClassLibraryProjects.sln --no-build --verbosity normal
